@@ -1,45 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}">
-    <title>Agro</title> 
-</head>
-  
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-xs-6 col-6">
-                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
-                    <ul class="nav">
-                        <li class="active"><a href="#">Товары и услуги</a></li>
-                        <li><a href="#">Закупки</a></li>
-                        <li><a href="#">Продавцы</a></li>
-                        <li><a href="#">Покупатели</a></li>
-                    </ul>
-                    <a href="#" class="add_advert"><img src="images/plus_circle.png" alt="">Добавить объявление</a>
-                    <a href="registratsiya.html" class="add_advert"><img src="images/user.png" alt="">Вход / Регистрация</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+
+            {% include 'Menu.html' %}
+
         </div>
     </header>
     <div class="future other reg">
@@ -61,51 +27,52 @@
                                <label for="#">Пароль</label>
                                <input type="password" placeholder="************">
                            </div>
-                           <button type="submit">Войти</button> 
-                           <a href="#" class="remem_pass">Забыли пароль?</a>  
+                           <button type="submit">Войти</button>
+                           <a href="#" class="remem_pass">Забыли пароль?</a>
                        </form>
                     </div>
                     <div id="reg" class="tab_item ">
                         <div class="overlay"></div>
-                        <form action="#">
+                        <form  method="post">
+                            {% csrf_token %}
                             <div class="form_group">
                                <label for="#">Ваше имя / Название компании</label>
-                               <select name="" id="">
-                                   <option value="">Выбрать из списка</option>
-                                   <option value="">Выбрать из списка2</option>
-                                   <option value="">Выбрать из списка3</option>
+                               <select name="user_type" id="">
+                                   <option value="1">Tanlang</option>
+                                   <option value="2">Jismoniy shaxs</option>
+                                   <option value="1">Yuridik shaxs</option>
                                </select>
                             </div>
                             <div class="form_group">
                                <label for="#">Ваше имя / Название компании</label>
-                               <input type="text" placeholder="Ташматов Шариф">
+                               <input type="text" placeholder="Ташматов Шариф" name="NameOne">
                             </div>
                             <div class="form_group">
                                <label for="#">Электронный адрес</label>
-                               <input type="mail" placeholder="eleery@gmail.com">
+                               <input type="mail" placeholder="eleery@gmail.com" name="NameTwo">
                             </div>
                             <div class="form_group">
                                <label for="#">Пароль</label>
-                               <input type="password" placeholder="************">
+                               <input type="password" placeholder="************" name="NameSri">
                             </div>
                             <div class="form_group">
                                <label for="#">Номер телефона</label>
-                               <input type="tel" class="tel" placeholder="+998 (__) ___-__-__">
+                               <input type="tel" class="tel" placeholder="+998 (__) ___-__-__" name="NameFoo">
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="aser" style="display: none;"> 
+                                <input type="checkbox" id="aser" name="agree" value="yes" style="display: none;">
                                 <label for="aser" class="check_form">
                                     Согласен с условиями <a href="#" target="_blank">публичной оферты</a>
                                 </label>
                             </div>
-                           <button type="submit">Войти</button> 
+                           <button type="submit">Войти</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer>
         <div class="ftr_top">
             <div class="container">
@@ -152,5 +119,6 @@
             prefix: "+998"
           });
     </script>
-</body>
-</html>
+
+{% endblock %}
+

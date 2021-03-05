@@ -1,46 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
-    <link rel="stylesheet" href="{% static 'css/lightslider.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}">
-    <title>Adds</title> 
-</head>
- 
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-xs-6 col-6">
-                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
-                    <ul class="nav">
-                        <li class="active"><a href="#">Товары и услуги</a></li>
-                        <li><a href="#">Закупки</a></li>
-                        <li><a href="#">Продавцы</a></li>
-                        <li><a href="#">Покупатели</a></li>
-                    </ul>
-                    <a href="#" class="add_advert"><img src="images/plus_circle.png" alt="">Добавить объявление</a>
-                    <a href="#" class="add_advert"><img src="images/user.png" alt="">Вход / Регистрация</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+
+            {% include 'Menu.html' %}
+
         </div>
     </header>
     <div class="add_plus">
@@ -184,7 +149,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -206,7 +171,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -228,7 +193,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -250,7 +215,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -272,7 +237,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -294,7 +259,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -316,7 +281,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -338,7 +303,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                     <div class="mess_bottom">
@@ -360,7 +325,7 @@
                             <p>Проект полностью финансировался за счет собственных средств. Стартовые инвестиции в проект составили 12 млн руб., из них 70% пошло на разработку ERP-системы (от англ. Enterprise Resource Planning, управление ресурсами предприятия), остальное на создание сайта, а также мобильных приложений для iOS и Android.</p>
                         </div>
                         <div class="nigh">
-                            <p>Вчера, 22:31</p>   
+                            <p>Вчера, 22:31</p>
                         </div>
                     </div>
                 </div>
@@ -470,7 +435,7 @@
                                                 <label class="uploadPreview" for="file6">
                                                     <input type="file" id="file6" accept="image/*">
                                                     <span class="img-uploader">
-                                                        <div class="pl">Изменить логотип</div>   
+                                                        <div class="pl">Изменить логотип</div>
                                                     </span>
                                                 </label>
                                                 <span class="remove-image"></span>
@@ -603,7 +568,7 @@
                                                 <label class="uploadPreview" for="file6">
                                                     <input type="file" id="file6" accept="image/*">
                                                     <span class="img-uploader">
-                                                        <div class="pl">Изменить логотип</div>   
+                                                        <div class="pl">Изменить логотип</div>
                                                     </span>
                                                 </label>
                                                 <span class="remove-image"></span>
@@ -736,7 +701,7 @@
                                                 <label class="uploadPreview" for="file6">
                                                     <input type="file" id="file6" accept="image/*">
                                                     <span class="img-uploader">
-                                                        <div class="pl">Изменить логотип</div>   
+                                                        <div class="pl">Изменить логотип</div>
                                                     </span>
                                                 </label>
                                                 <span class="remove-image"></span>
@@ -869,7 +834,7 @@
                                                 <label class="uploadPreview" for="file6">
                                                     <input type="file" id="file6" accept="image/*">
                                                     <span class="img-uploader">
-                                                        <div class="pl">Изменить логотип</div>   
+                                                        <div class="pl">Изменить логотип</div>
                                                     </span>
                                                 </label>
                                                 <span class="remove-image"></span>
@@ -1120,7 +1085,7 @@
     {% include 'JSforInclude.html' %}
 
     <script>
-          
+
           $('#imageGallery').lightSlider({
                 gallery:true,
                 item:1,
@@ -1134,9 +1099,9 @@
                         selector: '#imageGallery .lslide'
                     });
                 }
-            });  
+            });
 
 
     </script>
-</body>
-</html>
+{% endblock %}
+

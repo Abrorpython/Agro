@@ -1,45 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{%static 'font/stylesheet.css' %}">
-    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{%static 'css/all.min.css' %}">
-    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{%static 'css/select2.min.css' %}">
-    <link rel="stylesheet" href="{%static 'css/style.css' %}">
-    <link rel="stylesheet" href="{%static 'css/media.css' %}">
-    <title>Razdel</title> 
-</head>
- 
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-xs-6 col-6">
-                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
-                    <ul class="nav">
-                        <li class="active"><a href="#">Товары и услуги</a></li>
-                        <li><a href="#">Закупки</a></li>
-                        <li><a href="#">Продавцы</a></li>
-                        <li><a href="#">Покупатели</a></li>
-                    </ul>
-                    <a href="#" class="add_advert"><img src="images/plus_circle.png" alt="">Добавить объявление</a>
-                    <a href="#" class="add_advert"><img src="images/user.png" alt="">Вход / Регистрация</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+
+            {% include 'Menu.html' %}
+
         </div>
     </header>
     <div class="future lin">
@@ -183,7 +149,7 @@
                 <div class="choose_filt">
                     <p><img src="images/sortirovka.png" alt=""> Сортировка: <span class="choosen">Самые новые</span></p>
                     <div class="language-popup">
-                        <a href="#">Самые новые 1</a>                              
+                        <a href="#">Самые новые 1</a>
                         <a class="active" href="#">Самые новые 2</a>
                         <a href="#">Самые новые 3</a>
                     </div>
@@ -245,10 +211,10 @@
                         <span class="adress_pr"><img src="images/map_mar.png" alt="">Ташкент, Шайхантахурский район</span>
                         <span class="adress_pr"><img src="images/clock.png" alt="">Вчера 23:25</span>
                         <a href="#" class="razd_star"><i class="fas fa-star"></i><i class="far fa-star"></i></a>
-                       
+
                     </div>
                 </div>
-               
+
                 <div class="pagination clr">
                     <a href="#"><i class="fa fa-angle-double-left"></i> Назад</a>
                     <a href="#">1</a>
@@ -311,10 +277,11 @@
 
     <script>
           $('.two_text').ellipsis({
-              lines:4,             
-              ellipClass: 'ellip',  
-              responsive: true    
+              lines:4,
+              ellipClass: 'ellip',
+              responsive: true
             });
     </script>
-</body>
-</html>
+
+{% endblock %}
+

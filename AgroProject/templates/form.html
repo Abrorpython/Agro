@@ -1,46 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
-    <link rel="stylesheet" href="{% static 'css/lightslider.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}">
-    <title>Form</title> 
-</head>
- 
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-xs-6 col-6">
-                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
-                    <ul class="nav">
-                        <li class="active"><a href="#">Товары и услуги</a></li>
-                        <li><a href="#">Закупки</a></li>
-                        <li><a href="#">Продавцы</a></li>
-                        <li><a href="#">Покупатели</a></li>
-                    </ul>
-                    <a href="#" class="add_advert"><img src="images/plus_circle.png" alt="">Добавить объявление</a>
-                    <a href="#" class="add_advert"><img src="images/user.png" alt="">Вход / Регистрация</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+
+            {% include 'Menu.html' %}
+
         </div>
     </header>
     <div class="add_plus">
@@ -155,7 +120,7 @@
                 <div class="col-md-6">
                     <div class="form_group">
                         <label for="">Описание <span>*</span></label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>                    
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                 </div>
             </div>
@@ -168,7 +133,7 @@
                         <label class="uploadPreview" for="file1">
                             <input type="file" id="file1" accept="image/*">
                             <span class="img-uploader">
-                                <div class="pl">+</div>   
+                                <div class="pl">+</div>
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -177,7 +142,7 @@
                         <label class="uploadPreview" for="file2">
                             <input type="file" id="file2" accept="image/*">
                             <span class="img-uploader">
-                                <div class="pl">+</div>   
+                                <div class="pl">+</div>
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -186,7 +151,7 @@
                         <label class="uploadPreview" for="file3">
                             <input type="file" id="file3" accept="image/*">
                             <span class="img-uploader">
-                                <div class="pl">+</div>   
+                                <div class="pl">+</div>
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -195,7 +160,7 @@
                         <label class="uploadPreview" for="file4">
                             <input type="file" id="file4" accept="image/*">
                             <span class="img-uploader">
-                                <div class="pl">+</div>   
+                                <div class="pl">+</div>
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -204,7 +169,7 @@
                         <label class="uploadPreview" for="file5">
                             <input type="file" id="file5" accept="image/*">
                             <span class="img-uploader">
-                                <div class="pl">+</div>   
+                                <div class="pl">+</div>
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -213,7 +178,7 @@
                         <label class="uploadPreview" for="file6">
                             <input type="file" id="file6" accept="image/*">
                             <span class="img-uploader">
-                                <div class="pl">+</div>   
+                                <div class="pl">+</div>
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -267,12 +232,5 @@
             </div>
         </div>
     </footer>
-
-    {% include 'JSforInclude.html' %}
-
-    <script>
-
-
-    </script>
-</body>
-</html>
+{% include 'JSforInclude.html' %}
+{% endblock %}

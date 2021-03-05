@@ -1,45 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}" type="text/css">
-    <title>Agro</title> 
-</head>
- 
-<body>
-    <header>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<header>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-xs-6 col-6">
-                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
-                    <ul class="nav">
-                        <li class="active"><a href="#">Товары и услуги</a></li>
-                        <li><a href="#">Закупки</a></li>
-                        <li><a href="#">Продавцы</a></li>
-                        <li><a href="#">Покупатели</a></li>
-                    </ul>
-                    <a href="#" class="add_advert"><img src="images/plus_circle.png" alt="">Добавить объявление</a>
-                    <a href="#" class="add_advert"><img src="images/user.png" alt="">Вход / Регистрация</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+
+            {% include 'Menu.html' %}
+
         </div>
     </header>
     <div class="future">
@@ -107,7 +73,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/fish.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -119,7 +85,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/trava.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -131,7 +97,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/chicken.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -143,7 +109,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/Polifoska_1.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -155,7 +121,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/gov2.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -167,7 +133,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/fish.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -179,7 +145,7 @@
             <div class="item">
                 <div class="bc_item" style="background-image: url(images/fish.png);"></div>
                 <a href="#" class="title_item">
-                    Семена, саженцы и посевные 
+                    Семена, саженцы и посевные
                 </a>
                 <ul>
                     <li><a href="#">Зарыбок  ∙  1</a></li>
@@ -242,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -380,7 +346,7 @@
             <h2 class="title_md">Коротко о преимуществах</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <p>У каждого сельскохозяйственного производителя немало хлопот. Кроме круглогодичной заботы о растениях, животных, встают проблемы с реализацией выращенной продукции.</p> 
+                    <p>У каждого сельскохозяйственного производителя немало хлопот. Кроме круглогодичной заботы о растениях, животных, встают проблемы с реализацией выращенной продукции.</p>
                     <p>Специфика этих товаров заключается в необходимости срочной реализации, где отлично может помочь торговая площадка а именно доска объявлений.  Не всегда удается оперативно найти покупателя, выгодно продать товар. Наша доска агро объявлений Узбекистана поможет каждому аграрию и сельскому хозяйству максимально быстро продать свою продукцию.  Поиск покупателей и продавцов не требует затрат времени. Войти в интернет, найти партнера, совершить сделку, можно дома, в дороге, офисе. Конечно, наша агродоска не единственная в сети, но наш сайт обеспечивает своим пользователям ряд преимуществ. </p>
                 </div>
                 <div class="col-lg-6">
@@ -432,6 +398,4 @@
     </footer>
 
     {% include 'JSforInclude.html' %}
-
-</body>
-</html>
+{% endblock %}
