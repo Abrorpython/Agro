@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <header>
+        <div class="container">
+
+            {% include 'Menu.html' %}
+
+        </div>
+    </header>
+    <div class="future lin">
+        <div class="container">
+            <div class="links_top">
+                <a href="index.html">Главная</a>
+                <a href="#">Продавцы</a>
+            </div>  
+			<div>
+				<div class="item_prod">
+					<div class="text">
+						<a href="#" class="title">Компания: ЧП "PLANETA SERVIS"</a>
+						<p class="two_text">Email: <b>testmail@gmail.com</b></p>
+						<p class="two_text">Telefon raqami: <b>+998999876543</b></p>
+					</div>
+				</div>
+				<div class="item_prod">
+					<div class="text">
+						<a href="#" class="title">Foydalanuvchi: Olimov Alisher</a>
+						<p class="two_text">Email: <b>testmail@gmail.com</b></p>
+						<p class="two_text">Telefon raqami: <b>+998999876543</b></p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <footer>
+        <div class="ftr_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <a href="#" class="mb_wi"><img src="images/logo_white.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 ots col-6">
+                        <p>Доступно для скачивания</p>
+                        <div class="foot_link">
+                            <a href="#"><img src="images/app_store.png" alt=""></a>
+                            <a href="#"><img src="images/google_play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 ots col-6">
+                        <p>Принимаем к оплате</p>
+                        <div class="foot_link">
+                            <a href="#"><img src="images/payme.png" alt=""></a>
+                            <a href="#"><img src="images/click.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 text-right">
+                        <a href="#">Помощь</a>
+                        <a href="#">Написать администратору</a>
+                        <a href="#">Размещение рекламы </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ftr_bottom">
+            <div class="container">
+                <p>Agro Uzbekistan © 2018</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    {% include 'JSforInclude.html' %}
+    <script>
+          $('.two_text').ellipsis({
+              lines:4,             
+              ellipClass: 'ellip',  
+              responsive: true    
+            });
+    </script>
+{% endblock %}
