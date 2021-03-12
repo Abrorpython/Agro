@@ -4,7 +4,7 @@
     <header>
         <div class="container">
 
-            {% include 'Menu.html' %}
+        {% include 'Menu.html' %}
 
         </div>
     </header>
@@ -41,19 +41,25 @@
                     <div class="form_group d-flex justify-content-between">
                         <label for="">Выберите категорию <span>*</span></label>
                         <select name="" id=""  data-toggle="tooltip" data-placement="right" title="Информационное сообщение с подсказкой будет выводится во всплывающем блоке типа tooltip. И поможет пользователю сориентироваться с полями.">
-                            <option value="">Выбрать </option>
-                            <option value="">Выбрать 2</option>
+                            {% for i in category %}
+                            <option value="">{{ i.CategoriyName }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="form_group d-flex justify-content-between">
                         <label for="">Город или Регион <span>*</span></label>
-                        <input type="text" value="Ташкентская область">
+                        <select name="" id="">
+                            {% for i in provines %}
+                            <option value="{{i.id}}">{{ i.ProName }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                     <div class="form_group d-flex justify-content-between">
                         <label for="">Тип объявления <span>*</span></label>
                         <select name="" id="">
-                            <option value="">Выбрать</option>
-                            <option value="">Выбрать 2</option>
+                            {% for i in obyavleniya %}
+                            <option value="">{{ i.obyavName }}</option>
+                            {% endfor %}
                         </select>
                     </div>
 
@@ -64,15 +70,16 @@
                 <div class="col-md-6">
                     <div class="form_group">
                         <label for="">Заголовок объявления <span>*</span></label>
-                        <input type="text">
+                        <input type="text" name="obyavleniya">
                     </div>
                     <div class="row">
                         <div class="col-xl-4 col-lg-6">
                             <div class="form_group">
                                 <label for="">Состояние</label>
                                 <select name="" id="">
-                                    <option value="">Выбрать </option>
-                                    <option value="">Выбрать 2</option>
+                                    {% for i in sostayanie %}
+                                    <option value="">{{ i.SostayanieName }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -80,8 +87,9 @@
                             <div class="form_group">
                                 <label for="">Частное лицо/Бизнес</label>
                                 <select name="" id="">
-                                    <option value="">Выбрать </option>
-                                    <option value="">Выбрать 2</option>
+                                    {% for i in chastnolitso %}
+                                    <option value="">{{ i.PrivatePersonName }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -89,8 +97,9 @@
                             <div class="form_group">
                                 <label for="">Наличие</label>
                                 <select name="" id="">
-                                    <option value="">Выбрать </option>
-                                    <option value="">Выбрать 2</option>
+                                    {% for i in nalichie %}
+                                    <option value="">{{ i.NalichieName }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -104,8 +113,9 @@
                             <div class="form_group">
                                 <label class="hide_text">hide_text</label>
                                 <select name="" id="">
-                                    <option value="">Долларов США</option>
-                                    <option value="">Долларов США 2</option>
+                                    {% for i in edinitstva %}
+                                    <option value="">{{ i.EdinitsvaName }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -120,7 +130,7 @@
                 <div class="col-md-6">
                     <div class="form_group">
                         <label for="">Описание <span>*</span></label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>                    
                     </div>
                 </div>
             </div>
@@ -131,54 +141,54 @@
                 <div class="row form-group upload-photo">
                     <div class="col-6 col-xl-2 col-lg-2">
                         <label class="uploadPreview" for="file1">
-                            <input type="file" id="file1" accept="image/*">
+                            <input type="file" id="file1" accept="image/*" name="rasmlar">
                             <span class="img-uploader">
-                                <div class="pl">+</div>
+                                <div class="pl">+</div>   
                             </span>
                         </label>
                         <span class="remove-image">+</span>
                     </div>
                     <div class="col-6 col-xl-2 col-lg-2">
                         <label class="uploadPreview" for="file2">
-                            <input type="file" id="file2" accept="image/*">
+                            <input type="file" id="file2" accept="image/*" name="rasmlar">
                             <span class="img-uploader">
-                                <div class="pl">+</div>
+                                <div class="pl">+</div>   
                             </span>
                         </label>
                         <span class="remove-image">+</span>
                     </div>
                     <div class="col-6 col-xl-2 col-lg-2">
                         <label class="uploadPreview" for="file3">
-                            <input type="file" id="file3" accept="image/*">
+                            <input type="file" id="file3" accept="image/*" name="rasmlar">
                             <span class="img-uploader">
-                                <div class="pl">+</div>
+                                <div class="pl">+</div>   
                             </span>
                         </label>
                         <span class="remove-image">+</span>
                     </div>
                     <div class="col-6 col-xl-2 col-lg-2">
                         <label class="uploadPreview" for="file4">
-                            <input type="file" id="file4" accept="image/*">
+                            <input type="file" id="file4" accept="image/*" name="rasmlar">
                             <span class="img-uploader">
-                                <div class="pl">+</div>
+                                <div class="pl">+</div>   
                             </span>
                         </label>
                         <span class="remove-image">+</span>
                     </div>
                     <div class="col-6 col-xl-2 col-lg-2">
                         <label class="uploadPreview" for="file5">
-                            <input type="file" id="file5" accept="image/*">
+                            <input type="file" id="file5" accept="image/*" name="rasmlar">
                             <span class="img-uploader">
-                                <div class="pl">+</div>
+                                <div class="pl">+</div>   
                             </span>
                         </label>
                         <span class="remove-image">+</span>
                     </div>
                     <div class="col-6 col-xl-2 col-lg-2">
                         <label class="uploadPreview" for="file6">
-                            <input type="file" id="file6" accept="image/*">
+                            <input type="file" id="file6" accept="image/*" name="rasmlar">
                             <span class="img-uploader">
-                                <div class="pl">+</div>
+                                <div class="pl">+</div>   
                             </span>
                         </label>
                         <span class="remove-image">+</span>
@@ -188,7 +198,7 @@
             <hr>
             <div class="axel">
                 <a href="#">Предпросмотр</a>
-                <a href="#">Разместить объявление</a>
+                <button type="submit">Отправит</button>
             </div>
         </div>
     </div>
